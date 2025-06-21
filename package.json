@@ -1,0 +1,25 @@
+{
+  "name": "bbq-catering",
+  "version": "1.0.0",
+  "description": "Welcome to the Purple Haze BBQ catering website repository. This project showcases our premium BBQ catering services in the DMV (DC, Maryland, Virginia) area.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomicdsolutions/bbq-catering.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atomicdsolutions/bbq-catering/issues"
+  },
+  "homepage": "https://github.com/atomicdsolutions/bbq-catering#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10"
+  }
+}
