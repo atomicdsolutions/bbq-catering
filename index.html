@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Haze BBQ - Premium BBQ Catering in DMV</title>
+    <meta name="description" content="Premier BBQ catering service in the DMV area. Offering authentic, premium BBQ for events of all sizes with professional service and unforgettable flavors.">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav>
+                <img src="logo/logo.png" alt="Purple Haze BBQ Logo" height="60">
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#consultation" class="btn btn-primary">Book Consultation</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Elevating BBQ Catering in the DMV</h1>
+            <p class="subtitle">Premium smoke, unforgettable flavor for your special events</p>
+            <a href="#consultation" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Catering Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Small Events</h3>
+                    <p>Perfect for intimate gatherings of 20-50 guests</p>
+                    <ul>
+                        <li>Custom menu selection</li>
+                        <li>Half pan options available</li>
+                        <li>Delivery or full service</li>
+                        <li>Professional setup</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Medium Events</h3>
+                    <p>Ideal for gatherings of 50-100 guests</p>
+                    <ul>
+                        <li>Expanded menu options</li>
+                        <li>Mix of half and full pans</li>
+                        <li>On-site BBQ master</li>
+                        <li>Full service staff available</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Large Events</h3>
+                    <p>Designed for events of 100+ guests</p>
+                    <ul>
+                        <li>Comprehensive catering packages</li>
+                        <li>Full pan service</li>
+                        <li>Multiple BBQ stations</li>
+                        <li>Complete event staffing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Premium BBQ Menu</h2>
+            <div class="menu-grid">
+                <!-- Proteins -->
+                <div class="menu-category">
+                    <h3>Signature Proteins</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <h4>Smoked Brisket</h4>
+                            <p>14-hour slow-smoked certified Angus beef</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Baby Back Ribs</h4>
+                            <p>Fall-off-the-bone tender with our signature rub</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Pulled Pork</h4>
+                            <p>Tender, hand-pulled pork shoulder</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Smoked Chicken</h4>
+                            <p>Herb-brined and perfectly smoked</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="menu-category">
+                    <h3>Classic Sides</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <h4>Mac & Cheese</h4>
+                            <p>Creamy blend of premium cheeses</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Coleslaw</h4>
+                            <p>Fresh, crispy slaw with house dressing</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Baked Beans</h4>
+                            <p>Slow-cooked with brisket ends</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Cornbread</h4>
+                            <p>Sweet and moist with honey butter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="menu-note">All items available in half and full pans. Custom menus available upon consultation.</p>
+        </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section id="consultation" class="consultation">
+        <div class="container">
+            <h2>Schedule Your Consultation</h2>
+            <form class="consultation-form" id="consultationForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventDate" class="form-label">Event Date</label>
+                    <input type="date" id="eventDate" name="eventDate" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service" class="form-label">Service Type</label>
+                    <select id="service" name="service" class="form-input" required>
+                        <option value="">Select a service type</option>
+                        <option value="delivery">Delivery Only</option>
+                        <option value="full">Full Service</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Additional Details</label>
+                    <textarea id="message" name="message" class="form-input" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Schedule Consultation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Phone: (202) 555-1234</p>
+                    <p>Email: info@purplehaze-bbq.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Area</h4>
+                    <p>Serving the entire DMV area:</p>
+                    <p>Washington DC, Maryland, and Virginia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your backend
+            alert('Thank you for your interest! We will contact you shortly to confirm your consultation.');
+        });
+    </script>
+</body>
+</html>
