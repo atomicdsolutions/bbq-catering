@@ -117,6 +117,29 @@ h4 { font-size: 1.5rem; line-height: 1.4; }
   z-index: 100;
 }
 
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-dark-gray);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--color-purple);
+}
+
 /* Hero section */
 .hero {
   background-color: var(--color-light-purple);
@@ -187,5 +210,20 @@ h4 { font-size: 1.5rem; line-height: 1.4; }
   
   .services, .menu {
     padding: 3rem 0;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .nav-links .btn {
+    width: 100%;
   }
 }
