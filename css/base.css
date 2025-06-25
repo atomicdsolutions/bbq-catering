@@ -22,6 +22,11 @@
     /* Font Families */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
+
+    /* Layout */
+    --section-padding: 6rem;
+    --container-padding: 2rem;
+    --container-max-width: 1200px;
 }
 
 /* Reset */
@@ -31,10 +36,109 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-body);
     line-height: 1.5;
     color: var(--gray-dark);
-    min-height: 200vh; /* For scroll demo */
-    background: linear-gradient(45deg, #f3f3f3 0%, #ffffff 100%);
+    background-color: var(--white);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+/* Sections */
+section:not(.hero) {
+    padding: var(--section-padding) 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--purple-dark);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.section-title {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-medium);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    :root {
+        --container-max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --container-max-width: 720px;
+        --section-padding: 5rem;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-max-width: 540px;
+        --section-padding: 4rem;
+        --container-padding: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --container-padding: 1.25rem;
+        --section-padding: 3rem;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
 }
