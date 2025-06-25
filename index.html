@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -95,6 +96,48 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Who We Are</h2>
+                    <div class="about-text">
+                        <p class="lead">Led by Executive Pitmaster Marcus Johnson, Purple Haze BBQ is revolutionizing DMV's catering scene by fusing time-honored Southern BBQ traditions with innovative culinary techniques.</p>
+                        <p>Our award-winning approach combines heritage recipes, sustainable practices, and cutting-edge smoking methods to create unforgettable dining experiences that honor both tradition and innovation.</p>
+                        <p>The "Purple Haze" signature comes from our proprietary spice blend—a unique fusion of traditional and exotic spices that creates our distinctive purple-hued bark and perfectly balanced flavor profile.</p>
+                        <p class="highlight">As a proud Black-owned business, we're more than caterers—we're culinary storytellers, bringing people together through exceptional food while championing diversity in the DMV's vibrant food scene.</p>
+                    </div>
+                </div>
+                <div class="about-image" style="background-image: url('images/team/marcus-johnson.jpg');">
+                    <div class="image-caption">
+                        <p class="caption-title">Chef Marcus Johnson</p>
+                        <p class="caption-subtitle">Founder & Executive Pitmaster</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <div class="achievement">
+                    <div class="achievement-number">500+</div>
+                    <div class="achievement-text">Events Catered</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">15+</div>
+                    <div class="achievement-text">BBQ Competition Awards</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">98%</div>
+                    <div class="achievement-text">Client Satisfaction</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">25K+</div>
+                    <div class="achievement-text">Happy Guests Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         // Header scroll effect
         window.addEventListener('scroll', function() {
@@ -125,6 +168,40 @@
                 socialIcons.classList.remove('active');
             });
         });
+
+        // Animate achievements when in view
+        const animateAchievements = () => {
+            const achievements = document.querySelectorAll('.achievement-number');
+            achievements.forEach(achievement => {
+                const target = parseInt(achievement.textContent);
+                let current = 0;
+                const increment = target / 50; // Adjust speed
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        achievement.textContent = target + (achievement.textContent.includes('%') ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        achievement.textContent = Math.floor(current) + (achievement.textContent.includes('%') ? '%' : '+');
+                    }
+                }, 20);
+            });
+        };
+
+        // Intersection Observer for achievements animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateAchievements();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const achievements = document.querySelector('.achievements');
+        if (achievements) {
+            observer.observe(achievements);
+        }
     </script>
 </body>
 </html>
