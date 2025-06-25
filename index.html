@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/values.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -95,6 +97,106 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Who We Are</h2>
+                    <div class="about-text">
+                        <p class="lead">Led by Executive Pitmaster Marcus Johnson, Purple Haze BBQ is revolutionizing DMV's catering scene by fusing time-honored Southern BBQ traditions with innovative culinary techniques.</p>
+                        <p>Our award-winning approach combines heritage recipes, sustainable practices, and cutting-edge smoking methods to create unforgettable dining experiences that honor both tradition and innovation.</p>
+                        <p>The "Purple Haze" signature comes from our proprietary spice blend—a unique fusion of traditional and exotic spices that creates our distinctive purple-hued bark and perfectly balanced flavor profile.</p>
+                        <p class="highlight">As a proud Black-owned business, we're more than caterers—we're culinary storytellers, bringing people together through exceptional food while championing diversity in the DMV's vibrant food scene.</p>
+                    </div>
+                </div>
+                <div class="about-image" style="background-image: url('images/team/marcus-johnson.jpg');">
+                    <div class="image-caption">
+                        <p class="caption-title">Chef Marcus Johnson</p>
+                        <p class="caption-subtitle">Founder & Executive Pitmaster</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <div class="achievement">
+                    <div class="achievement-number">500+</div>
+                    <div class="achievement-text">Events Catered</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">15+</div>
+                    <div class="achievement-text">BBQ Competition Awards</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">98%</div>
+                    <div class="achievement-text">Client Satisfaction</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">25K+</div>
+                    <div class="achievement-text">Happy Guests Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title">Our Values</h2>
+            <p class="section-subtitle">The principles that guide everything we do — from food preparation to customer service.</p>
+            
+            <div class="values-grid">
+                <div class="value-card" data-delay="0">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to eco-friendly practices, from sourcing local ingredients to using sustainable packaging and minimizing waste.</p>
+                    <div class="value-tags">
+                        <span class="value-tag">Local Sourcing</span>
+                        <span class="value-tag">Eco-Friendly</span>
+                    </div>
+                </div>
+
+                <div class="value-card" data-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Artisanal Excellence</h3>
+                    <p>Every dish is crafted with precision, combining traditional techniques with modern culinary innovation to create exceptional flavors.</p>
+                    <div class="value-tags">
+                        <span class="value-tag">Craftsmanship</span>
+                        <span class="value-tag">Innovation</span>
+                    </div>
+                </div>
+
+                <div class="value-card" data-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Inclusivity</h3>
+                    <p>We celebrate diversity through food, creating inclusive experiences that bring communities together and honor various dietary preferences.</p>
+                    <div class="value-tags">
+                        <span class="value-tag">Community</span>
+                        <span class="value-tag">Diversity</span>
+                    </div>
+                </div>
+
+                <div class="value-card" data-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We push boundaries in BBQ, embracing new technologies and techniques while staying true to the soul of traditional barbecue.</p>
+                    <div class="value-tags">
+                        <span class="value-tag">Technology</span>
+                        <span class="value-tag">Tradition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         // Header scroll effect
         window.addEventListener('scroll', function() {
@@ -124,6 +226,60 @@
                 navMenu.classList.remove('active');
                 socialIcons.classList.remove('active');
             });
+        });
+
+        // Animate achievements when in view
+        const animateAchievements = () => {
+            const achievements = document.querySelectorAll('.achievement-number');
+            achievements.forEach(achievement => {
+                const target = parseInt(achievement.textContent);
+                let current = 0;
+                const increment = target / 50; // Adjust speed
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        achievement.textContent = target + (achievement.textContent.includes('%') ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        achievement.textContent = Math.floor(current) + (achievement.textContent.includes('%') ? '%' : '+');
+                    }
+                }, 20);
+            });
+        };
+
+        // Intersection Observer for achievements animation
+        const achievementsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateAchievements();
+                    achievementsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const achievements = document.querySelector('.achievements');
+        if (achievements) {
+            achievementsObserver.observe(achievements);
+        }
+
+        // Values Cards Animation
+        const valueCardsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    const delay = card.getAttribute('data-delay');
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, delay);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.value-card').forEach(card => {
+            valueCardsObserver.observe(card);
         });
     </script>
 </body>
