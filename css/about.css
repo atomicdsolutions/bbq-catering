@@ -1,0 +1,189 @@
+/* About Section Styles */
+.about {
+    padding: 6rem 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--purple-light);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-content {
+    padding-right: 2rem;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-text .lead {
+    font-size: 1.25rem;
+    color: var(--purple-primary);
+    font-weight: 500;
+    font-family: var(--font-heading);
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: var(--gray-dark);
+}
+
+.about-text .highlight {
+    padding: 1.5rem;
+    background-color: rgba(93, 46, 140, 0.05);
+    border-left: 4px solid var(--purple-primary);
+    border-radius: 0 4px 4px 0;
+    font-weight: 500;
+}
+
+.about-image {
+    position: relative;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+    z-index: 2;
+}
+
+.caption-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.caption-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Achievements Section */
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.achievement {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gold-accent);
+    margin-bottom: 1rem;
+}
+
+.achievement-text {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+    .achievements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        padding: 4rem 0;
+    }
+
+    .about-text .lead {
+        font-size: 1.1rem;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .image-caption {
+        left: 1rem;
+        bottom: 1rem;
+    }
+
+    .caption-title {
+        font-size: 1.25rem;
+    }
+
+    .caption-subtitle {
+        font-size: 1rem;
+    }
+
+    .achievements {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
