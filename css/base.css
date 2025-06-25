@@ -1,0 +1,40 @@
+/* Base styles and brand colors */
+:root {
+    /* Primary Colors */
+    --purple-primary: #5D2E8C;
+    --gold-accent: #DAB03C;
+    
+    /* Secondary Colors */
+    --purple-dark: #2D1843;
+    --purple-light: #F5F0FF;
+    
+    /* Neutral Colors */
+    --gray-dark: #212121;
+    --gray-medium: #757575;
+    --gray-light: #F5F5F5;
+    --white: #FFFFFF;
+    
+    /* UI Colors */
+    --gold-hover: #B99029;
+    --border-color: #E0E0E0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    /* Font Families */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.5;
+    color: var(--gray-dark);
+    min-height: 200vh; /* For scroll demo */
+    background: linear-gradient(45deg, #f3f3f3 0%, #ffffff 100%);
+}
