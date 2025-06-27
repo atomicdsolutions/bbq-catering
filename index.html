@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/journey.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/consultation.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
@@ -457,6 +458,137 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section class="consultation" id="consultation">
+        <div class="consultation-container">
+            <div class="consultation-grid">
+                <div class="consultation-content">
+                    <h2 class="section-title">Get Your Free Consultation</h2>
+                    <p class="section-subtitle">Let's create an unforgettable BBQ experience for your next event. Our catering experts will help you plan the perfect menu.</p>
+                    
+                    <div class="consultation-features">
+                        <div class="consultation-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Custom Menu Planning</h4>
+                                <p>Personalized menu selection based on your preferences and dietary needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="consultation-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Flexible Scheduling</h4>
+                                <p>Choose a consultation time that works best for your schedule.</p>
+                            </div>
+                        </div>
+
+                        <div class="consultation-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Transparent Pricing</h4>
+                                <p>Get detailed pricing information with no hidden fees or surprises.</p>
+                            </div>
+                        </div>
+
+                        <div class="consultation-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Expert Guidance</h4>
+                                <p>Professional advice from our experienced catering specialists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consultation-form">
+                    <form id="consultationForm" onsubmit="return handleSubmit(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label required-field">First Name</label>
+                                <input type="text" class="form-input" name="firstName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required-field">Last Name</label>
+                                <input type="text" class="form-input" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label required-field">Email</label>
+                                <input type="email" class="form-input" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required-field">Phone</label>
+                                <input type="tel" class="form-input" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required-field">Event Type</label>
+                            <select class="form-select" name="eventType" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="private">Private Party</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label required-field">Event Date</label>
+                                <input type="date" class="form-input" name="eventDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required-field">Guest Count</label>
+                                <select class="form-select" name="guestCount" required>
+                                    <option value="">Select Guest Count</option>
+                                    <option value="20-50">20-50 guests</option>
+                                    <option value="51-100">51-100 guests</option>
+                                    <option value="101-200">101-200 guests</option>
+                                    <option value="201+">201+ guests</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Preferred Package</label>
+                            <select class="form-select" name="package">
+                                <option value="">Select Package (Optional)</option>
+                                <option value="essential">Essential BBQ ($25/person)</option>
+                                <option value="premium">Premium Feast ($40/person)</option>
+                                <option value="luxury">Luxury Experience ($65/person)</option>
+                                <option value="custom">Custom Package</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Additional Notes</label>
+                            <textarea class="form-textarea" name="notes" placeholder="Tell us more about your event, dietary requirements, or any special requests..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            Schedule Consultation
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
