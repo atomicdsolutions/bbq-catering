@@ -3,93 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no">
-    <title>Purple Haze BBQ - Premium BBQ Catering in DMV</title>
-    <meta name="description" content="Premier BBQ catering service in the DMV area. Offering authentic, premium BBQ for events of all sizes with professional service and unforgettable flavors.">
+    <title>Purple Haze BBQ - Premium Catering in the DMV</title>
+    <meta name="description" content="Premium BBQ catering services in the DMV area. Authentic flavors, professional service, unforgettable events.">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/journey.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">
+            <div class="logo">
                 <img src="assets/logo/logo.png" alt="Purple Haze BBQ" class="logo-img">
-            </a>
+            </div>
+            
             <nav class="nav">
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#menu" class="nav-link">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#consultation" class="nav-link nav-cta">Book Now</a>
-                    </li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                
                 <div class="social-icons">
-                    <a href="#" class="social-link" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="TikTok">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Twitter">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 </div>
+                
+                <a href="#consultation" class="nav-link nav-cta">Get Quote</a>
             </nav>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1>Elevating BBQ Catering in the DMV</h1>
-            <p class="hero-subtitle">Premium smoke, unforgettable flavor for your special events</p>
-            <p class="hero-description">From intimate gatherings to grand celebrations, we bring authentic BBQ excellence to your table. Savor our award-winning smoked meats and signature sides.</p>
-            <div class="hero-cta">
-                <a href="#consultation" class="btn btn-primary">Get Started</a>
-                <a href="#menu" class="btn btn-outline">View Menu</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium BBQ Catering in the DMV</h1>
+                <p class="hero-subtitle">Authentic flavors, professional service, unforgettable events</p>
+                <p class="hero-description">From intimate gatherings to large corporate events, we bring the authentic taste of traditional BBQ to your special occasions. Our expert team handles everything from setup to cleanup, ensuring your event is perfect.</p>
+                
+                <div class="hero-cta">
+                    <a href="#consultation" class="btn btn-primary">Get Your Quote</a>
+                    <a href="#menu" class="btn btn-outline">View Our Menu</a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <span>Custom Menus</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>10-500+ Guests</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <span>5-Star Service</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-features">
-                <div class="feature">
-                    <span class="feature-icon">🏆</span>
-                    <span class="feature-text">Premium Quality</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">Passionate about bringing authentic BBQ traditions to the modern catering experience.</p>
+                        <p>Purple Haze BBQ was born from a deep love of traditional barbecue techniques and a desire to share that passion with the DMV community. What started as a small family operation has grown into the region's premier BBQ catering service.</p>
+                        <p>Our team of experienced pitmasters combines time-honored smoking methods with innovative culinary techniques to create unforgettable dining experiences. We source only the finest ingredients and take pride in every dish we serve.</p>
+                        <p class="highlight">From backyard barbecues to corporate galas, we've catered thousands of successful events across DC, Maryland, and Virginia.</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <span class="feature-icon">👨‍🍳</span>
-                    <span class="feature-text">Expert BBQ Masters</span>
+                <div class="about-image">
+                    <img src="images/catering/medium-bbq-setup.jpg" alt="Professional BBQ catering setup" loading="lazy">
                 </div>
-                <div class="feature">
-                    <span class="feature-icon">🌟</span>
-                    <span class="feature-text">Custom Menus</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <p class="section-subtitle">From humble beginnings to becoming the DMV's premier BBQ catering service, every step of our journey has been driven by passion for authentic flavors and exceptional service.</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2018</div>
+                                <h3 class="event-title">The Beginning</h3>
+                                <p class="event-description">Started as a small family operation, serving friends and neighbors with our signature smoked brisket and homemade sides. The response was overwhelming.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2019</div>
+                                <h3 class="event-title">First Catering Event</h3>
+                                <p class="event-description">Catered our first corporate event for 50 people. The success led to referrals and established our reputation for professional service.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2020</div>
+                                <h3 class="event-title">Expansion & Recognition</h3>
+                                <p class="event-description">Expanded our menu and team. Featured in local publications and won our first catering award for excellence in BBQ cuisine.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2021</div>
+                                <h3 class="event-title">Premium Service Launch</h3>
+                                <p class="event-description">Launched our premium catering packages, serving events up to 500 guests. Introduced custom menu planning and consultation services.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2022</div>
+                                <h3 class="event-title">DMV Market Leader</h3>
+                                <p class="event-description">Became the go-to BBQ catering service in the DMV area. Served high-profile events and established partnerships with premier venues.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2023</div>
+                                <h3 class="event-title">Innovation & Growth</h3>
+                                <p class="event-description">Introduced new signature dishes, expanded our team, and launched our online ordering system. Continued commitment to quality and service.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="event-content">
+                                <div class="event-year">2024</div>
+                                <h3 class="event-title">Future Forward</h3>
+                                <p class="event-description">Launching new services, expanding our reach, and continuing to innovate while staying true to our roots and authentic BBQ traditions.</p>
+                                <div class="event-point"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-nav">
+                    <button class="prev" aria-label="Previous timeline events">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next" aria-label="Next timeline events">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <i class="fas fa-mouse"></i> Scroll or swipe to explore our journey
                 </div>
             </div>
         </div>
@@ -125,6 +228,202 @@
                 socialIcons.classList.remove('active');
             });
         });
+
+        // Timeline Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineTrack = document.querySelector('.timeline-events');
+            const prevBtn = document.querySelector('.timeline-nav .prev');
+            const nextBtn = document.querySelector('.timeline-nav .next');
+            const events = document.querySelectorAll('.timeline-event');
+            
+            let currentPosition = 0;
+            const eventWidth = events[0].offsetWidth + 60; // Width + gap
+            const maxPosition = -(events.length - 1) * eventWidth;
+
+            function updateNavButtons() {
+                prevBtn.disabled = currentPosition >= 0;
+                nextBtn.disabled = currentPosition <= maxPosition;
+            }
+
+            function moveTimeline(direction) {
+                const moveAmount = direction * eventWidth;
+                currentPosition = Math.max(maxPosition, Math.min(0, currentPosition - moveAmount));
+                timelineTrack.style.transform = `translateX(${currentPosition}px)`;
+                updateNavButtons();
+            }
+
+            prevBtn.addEventListener('click', () => moveTimeline(-1));
+            nextBtn.addEventListener('click', () => moveTimeline(1));
+
+            // Initialize button states
+            updateNavButtons();
+
+            // Add smooth hover effect to timeline events
+            events.forEach(event => {
+                event.addEventListener('mouseenter', () => {
+                    event.querySelector('.event-content').style.transform = 'translateY(-5px)';
+                });
+                event.addEventListener('mouseleave', () => {
+                    event.querySelector('.event-content').style.transform = 'translateY(0)';
+                });
+            });
+
+            // Handle touch events for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            timelineTrack.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            timelineTrack.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                const difference = touchStartX - touchEndX;
+                
+                if (Math.abs(difference) > 50) { // Minimum swipe distance
+                    moveTimeline(difference > 0 ? 1 : -1);
+                }
+            });
+        });
     </script>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2 class="section-title">BBQ Catering Packages</h2>
+            <p class="section-subtitle">Choose from our carefully curated packages or let us create a custom menu for your special event</p>
+            
+            <div class="services-grid">
+                <!-- Essential Package -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="package-name">Essential BBQ</h3>
+                        <div class="package-price">$25<span>/person</span></div>
+                        <p class="package-subtitle">Perfect for casual gatherings</p>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> Choice of 2 meats</li>
+                            <li><i class="fas fa-check"></i> 3 classic sides</li>
+                            <li><i class="fas fa-check"></i> House-made sauces</li>
+                            <li><i class="fas fa-check"></i> Bread rolls & butter</li>
+                            <li><i class="fas fa-check"></i> Disposable plates & utensils</li>
+                            <li><i class="fas fa-check"></i> Setup & cleanup</li>
+                            <li><i class="fas fa-check"></i> 20-50 guests</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <a href="#consultation" class="package-btn">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="package-card featured-package">
+                    <div class="package-header">
+                        <h3 class="package-name">Premium Feast</h3>
+                        <div class="package-price">$40<span>/person</span></div>
+                        <p class="package-subtitle">Our most popular package</p>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> Choice of 3 premium meats</li>
+                            <li><i class="fas fa-check"></i> 4 signature sides</li>
+                            <li><i class="fas fa-check"></i> Gourmet sauces selection</li>
+                            <li><i class="fas fa-check"></i> Artisan bread & butter</li>
+                            <li><i class="fas fa-check"></i> Premium disposables</li>
+                            <li><i class="fas fa-check"></i> Full service staff</li>
+                            <li><i class="fas fa-check"></i> 50-150 guests</li>
+                            <li><i class="fas fa-check"></i> Appetizers included</li>
+                            <li><i class="fas fa-check"></i> Custom menu options</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <a href="#consultation" class="package-btn">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Luxury Package -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="package-name">Luxury Experience</h3>
+                        <div class="package-price">$65<span>/person</span></div>
+                        <p class="package-subtitle">The ultimate BBQ experience</p>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> All premium meats</li>
+                            <li><i class="fas fa-check"></i> 5 gourmet sides</li>
+                            <li><i class="fas fa-check"></i> Custom sauce creation</li>
+                            <li><i class="fas fa-check"></i> Live grilling station</li>
+                            <li><i class="fas fa-check"></i> China & silverware</li>
+                            <li><i class="fas fa-check"></i> Full service staff</li>
+                            <li><i class="fas fa-check"></i> 100-500+ guests</li>
+                            <li><i class="fas fa-check"></i> Custom menu design</li>
+                            <li><i class="fas fa-check"></i> Bar service available</li>
+                            <li><i class="fas fa-check"></i> Event coordination</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <a href="#consultation" class="package-btn">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Purple Haze BBQ brings authentic BBQ traditions to modern catering in the DMV area. Professional service, unforgettable flavors, and exceptional events.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#journey">Our Journey</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#weddings">Wedding Catering</a></li>
+                        <li><a href="#corporate">Corporate Events</a></li>
+                        <li><a href="#private">Private Parties</a></li>
+                        <li><a href="#packages">BBQ Packages</a></li>
+                        <li><a href="#consultation">Free Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> (301) 555-0123</li>
+                        <li><i class="fas fa-envelope"></i> info@purplehazebbq.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> DMV Area</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9am - 7pm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Purple Haze BBQ. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> in the DMV</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

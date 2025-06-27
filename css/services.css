@@ -1,0 +1,156 @@
+.services {
+    padding: 6rem 0;
+    background-color: #F5F0FF;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.package-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.package-header {
+    background-color: #5D2E8C;
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+}
+
+.package-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #DAB03C;
+    margin-bottom: 0.5rem;
+}
+
+.package-price span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.package-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.package-content {
+    padding: 2rem;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.package-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #212121;
+    font-size: 0.95rem;
+}
+
+.package-features li i {
+    color: #5D2E8C;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+}
+
+.package-cta {
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.package-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #5D2E8C;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.package-btn:hover {
+    background-color: #2D1843;
+}
+
+.featured-package {
+    position: relative;
+    transform: scale(1.05);
+}
+
+.featured-package::before {
+    content: "Most Popular";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #DAB03C;
+    color: #2D1843;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.featured-package .package-header {
+    background-color: #2D1843;
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .featured-package {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 4rem 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .featured-package {
+        grid-column: span 1;
+    }
+    
+    .package-card {
+        transform: none !important;
+    }
+}
