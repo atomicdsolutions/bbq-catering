@@ -1,0 +1,212 @@
+.menu {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--purple-light);
+}
+
+.menu-tab {
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--purple-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--purple-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-tab.active {
+    color: var(--purple-dark);
+}
+
+.menu-tab.active::after {
+    transform: scaleX(1);
+}
+
+.menu-tab:hover {
+    color: var(--purple-dark);
+}
+
+.menu-content {
+    display: none;
+}
+
+.menu-content.active {
+    display: block;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.menu-item-content {
+    flex: 1;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--purple-dark);
+    margin: 0;
+}
+
+.menu-item-description {
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.menu-item-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--purple-primary);
+}
+
+.menu-item-badge {
+    background-color: var(--purple-light);
+    color: var(--purple-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.dietary-info {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dietary-icon {
+    color: var(--purple-primary);
+    font-size: 1rem;
+}
+
+.menu-section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: var(--gray-dark);
+    line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 4rem 0;
+    }
+
+    .menu-tabs {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+        gap: 1rem;
+    }
+
+    .menu-tab {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+        background-color: var(--purple-light);
+        border-radius: 6px;
+    }
+
+    .menu-tab::after {
+        display: none;
+    }
+
+    .menu-tab.active {
+        background-color: var(--purple-primary);
+        color: var(--white);
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .menu-item-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .menu-item-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .menu-item-details {
+        flex-direction: column;
+        align-items: center;
+    }
+}
