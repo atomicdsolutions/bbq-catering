@@ -60,32 +60,130 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Premium BBQ Catering in the DMV</h1>
-                <p class="hero-subtitle">Authentic flavors, professional service, unforgettable events</p>
-                <p class="hero-description">From intimate gatherings to large corporate events, we bring the authentic taste of traditional BBQ to your special occasions. Our expert team handles everything from setup to cleanup, ensuring your event is perfect.</p>
-                
-                <div class="hero-cta">
-                    <a href="#consultation" class="btn btn-primary">Get Your Quote</a>
-                    <a href="#menu" class="btn btn-outline">View Our Menu</a>
+        <!-- Hero Slider -->
+        <div class="hero-slider">
+            <!-- Slide 1: Backyard BBQ -->
+            <div class="hero-slide" data-slide="1">
+                <div class="slide-bg">
+                    <img src="assets/images/slides/backyard-bbq.jpg" alt="Backyard BBQ Event" class="slide-image">
+                    <div class="slide-overlay"></div>
                 </div>
+                <div class="container">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-subtitle">Family Favorites with a Twist</h2>
+                            <h1 class="slide-title">Backyard BBQ</h1>
+                            <p class="slide-description">Transform your backyard into a premium BBQ experience with our signature fusion flavors.</p>
+                            <div class="slide-cta">
+                                <a href="#consultation" class="cta-primary">Plan Your Event</a>
+                                <a href="#packages" class="cta-secondary">View Package <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-utensils"></i>
-                        <span>Custom Menus</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-users"></i>
-                        <span>10-500+ Guests</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-star"></i>
-                        <span>5-Star Service</span>
+            <!-- Slide 2: Corporate Events -->
+            <div class="hero-slide" data-slide="2">
+                <div class="slide-bg">
+                    <img src="assets/images/slides/corporate-events.jpg" alt="Corporate Catering" class="slide-image">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-subtitle">Professional Catering, Exceptional Flavor</h2>
+                            <h1 class="slide-title">Corporate Events</h1>
+                            <p class="slide-description">Elevate your corporate gatherings with our premium BBQ catering services.</p>
+                            <div class="slide-cta">
+                                <a href="#consultation" class="cta-primary">Get Custom Quote</a>
+                                <a href="#packages" class="cta-secondary">View Package <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Slide 3: Smokehouse Special -->
+            <div class="hero-slide" data-slide="3">
+                <div class="slide-bg">
+                    <img src="assets/images/slides/smokehouse-special.jpg" alt="Premium BBQ" class="slide-image">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-subtitle">Premium Proteins, Signature Sides</h2>
+                            <h1 class="slide-title">Smokehouse Special</h1>
+                            <p class="slide-description">Experience our finest selection of premium meats and innovative fusion sides.</p>
+                            <div class="slide-cta">
+                                <a href="#consultation" class="cta-primary">Discover Menu</a>
+                                <a href="#packages" class="cta-secondary">View Package <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Game Day -->
+            <div class="hero-slide" data-slide="4">
+                <div class="slide-bg">
+                    <img src="assets/images/slides/game-day.jpg" alt="Game Day Catering" class="slide-image">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h2 class="slide-subtitle">Game Day Done Right</h2>
+                            <h1 class="slide-title">Purple Smoke Out</h1>
+                            <p class="slide-description">Level up your game day experience with our crowd-pleasing BBQ packages.</p>
+                            <div class="slide-cta">
+                                <a href="#consultation" class="cta-primary">Plan Game Day</a>
+                                <a href="#packages" class="cta-secondary">View Package <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="slider-nav">
+                <button class="slider-arrow prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots">
+                    <button class="slider-dot active" data-slide="1" aria-label="Go to slide 1"></button>
+                    <button class="slider-dot" data-slide="2" aria-label="Go to slide 2"></button>
+                    <button class="slider-dot" data-slide="3" aria-label="Go to slide 3"></button>
+                    <button class="slider-dot" data-slide="4" aria-label="Go to slide 4"></button>
+                </div>
+                <button class="slider-arrow next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Slider Progress -->
+            <div class="slider-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Floating Action Cards -->
+        <div class="floating-highlights">
+            <div class="highlight-card">
+                <i class="fas fa-star"></i>
+                <h3>Premium Service</h3>
+                <p>5-Star Catering</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-users"></i>
+                <h3>Any Size Event</h3>
+                <p>20-500+ Guests</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-award"></i>
+                <h3>Award-Winning</h3>
+                <p>BBQ Masters</p>
             </div>
         </div>
     </section>
@@ -650,6 +748,137 @@
     </footer>
 
     <script>
+        // Hero Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.slider-arrow.prev');
+            const nextBtn = document.querySelector('.slider-arrow.next');
+            const progressBar = document.querySelector('.progress-bar');
+            
+            let currentSlide = 0;
+            let slideInterval;
+            const intervalTime = 5000; // Time between automatic slides
+
+            // Initialize first slide
+            slides[0].classList.add('active');
+            
+            // Function to move to a specific slide
+            function goToSlide(index) {
+                // Remove active class from current slide and dot
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                
+                // Update current slide
+                currentSlide = index;
+                
+                // Add active class to new slide and dot
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+                
+                // Reset and start progress bar animation
+                resetProgressBar();
+            }
+            
+            // Function to move to the next slide
+            function nextSlide() {
+                let index = currentSlide + 1;
+                if (index >= slides.length) index = 0;
+                goToSlide(index);
+            }
+            
+            // Function to move to the previous slide
+            function prevSlide() {
+                let index = currentSlide - 1;
+                if (index < 0) index = slides.length - 1;
+                goToSlide(index);
+            }
+            
+            // Progress bar animation
+            function startProgressBar() {
+                progressBar.style.width = '0%';
+                progressBar.style.transition = `width ${intervalTime}ms linear`;
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                }, 50);
+            }
+            
+            function resetProgressBar() {
+                progressBar.style.width = '0%';
+                progressBar.style.transition = 'none';
+                setTimeout(startProgressBar, 50);
+            }
+            
+            // Start automatic slideshow
+            function startSlideshow() {
+                slideInterval = setInterval(nextSlide, intervalTime);
+                startProgressBar();
+            }
+            
+            // Stop automatic slideshow
+            function stopSlideshow() {
+                clearInterval(slideInterval);
+                progressBar.style.width = '0%';
+            }
+            
+            // Event Listeners
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopSlideshow();
+                startSlideshow();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopSlideshow();
+                startSlideshow();
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    stopSlideshow();
+                    startSlideshow();
+                });
+            });
+            
+            // Pause slideshow on hover
+            const heroSection = document.querySelector('.hero');
+            heroSection.addEventListener('mouseenter', stopSlideshow);
+            heroSection.addEventListener('mouseleave', startSlideshow);
+            
+            // Start the slideshow
+            startSlideshow();
+            
+            // Touch Events for Mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            heroSection.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopSlideshow();
+            });
+            
+            heroSection.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startSlideshow();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const difference = touchStartX - touchEndX;
+                
+                if (Math.abs(difference) > swipeThreshold) {
+                    if (difference > 0) {
+                        nextSlide(); // Swipe left
+                    } else {
+                        prevSlide(); // Swipe right
+                    }
+                }
+            }
+        });
+
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
@@ -679,97 +908,6 @@
                 socialIcons.classList.remove('active');
             });
         });
-
-        // Timeline Navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const timelineTrack = document.querySelector('.timeline-events');
-            const prevBtn = document.querySelector('.timeline-nav .prev');
-            const nextBtn = document.querySelector('.timeline-nav .next');
-            const events = document.querySelectorAll('.timeline-event');
-            
-            let currentPosition = 0;
-            const eventWidth = events[0].offsetWidth + 60; // Width + gap
-            const maxPosition = -(events.length - 1) * eventWidth;
-
-            function updateNavButtons() {
-                prevBtn.disabled = currentPosition >= 0;
-                nextBtn.disabled = currentPosition <= maxPosition;
-            }
-
-            function moveTimeline(direction) {
-                const moveAmount = direction * eventWidth;
-                currentPosition = Math.max(maxPosition, Math.min(0, currentPosition - moveAmount));
-                timelineTrack.style.transform = `translateX(${currentPosition}px)`;
-                updateNavButtons();
-            }
-
-            prevBtn.addEventListener('click', () => moveTimeline(-1));
-            nextBtn.addEventListener('click', () => moveTimeline(1));
-
-            // Initialize button states
-            updateNavButtons();
-
-            // Add smooth hover effect to timeline events
-            events.forEach(event => {
-                event.addEventListener('mouseenter', () => {
-                    event.querySelector('.event-content').style.transform = 'translateY(-5px)';
-                });
-                event.addEventListener('mouseleave', () => {
-                    event.querySelector('.event-content').style.transform = 'translateY(0)';
-                });
-            });
-
-            // Handle touch events for mobile
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            timelineTrack.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            timelineTrack.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                const difference = touchStartX - touchEndX;
-                
-                if (Math.abs(difference) > 50) { // Minimum swipe distance
-                    moveTimeline(difference > 0 ? 1 : -1);
-                }
-            });
-        });
-
-        // Animate achievements when in view
-        const animateAchievements = () => {
-            const achievements = document.querySelectorAll('.achievement-number');
-            achievements.forEach(achievement => {
-                const target = parseInt(achievement.textContent);
-                let current = 0;
-                const increment = target / 50; // Adjust speed
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        achievement.textContent = target + (achievement.textContent.includes('%') ? '%' : '+');
-                        clearInterval(timer);
-                    } else {
-                        achievement.textContent = Math.floor(current) + (achievement.textContent.includes('%') ? '%' : '+');
-                    }
-                }, 20);
-            });
-        };
-
-        // Intersection Observer for achievements animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateAchievements();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const achievements = document.querySelector('.achievements');
-        if (achievements) {
-            observer.observe(achievements);
-        }
 
         // Menu tabs functionality
         document.addEventListener('DOMContentLoaded', function() {
