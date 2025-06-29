@@ -879,13 +879,57 @@
             }
         });
 
+        // Announcement Modal
+        const announcementModal = document.querySelector('.announcement-modal');
+        const closeAnnouncement = document.querySelector('.announcement-close');
+        
+        // Show announcement after a delay
+        setTimeout(() => {
+            announcementModal.classList.add('show');
+        }, 1000);
+
+        // Close announcement
+        closeAnnouncement.addEventListener('click', () => {
+            announcementModal.classList.remove('show');
+            // Store in sessionStorage that announcement was closed
+            sessionStorage.setItem('announcementClosed', 'true');
+        });
+
+        // Check if announcement was previously closed
+        if (sessionStorage.getItem('announcementClosed') === 'true') {
+            announcementModal.style.display = 'none';
+        }
+
+        // Announcement Slider
+        const slides = document.querySelectorAll('.announcement-slide');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.style.opacity = '0';
+            });
+            slides[index].classList.add('active');
+            setTimeout(() => {
+                slides[index].style.opacity = '1';
+            }, 50);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        if (slides.length > 1) {
+            setInterval(nextSlide, 5000);
+        }
+
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
-            const announcement = document.querySelector('.announcement-bar');
-            const announcementHeight = announcement ? announcement.offsetHeight : 0;
+            const scrollThreshold = 100; // Adjust this value as needed
             
-            if (window.scrollY > announcementHeight) {
+            if (window.scrollY > scrollThreshold) {
                 header.classList.add('sticky');
             } else {
                 header.classList.remove('sticky');
